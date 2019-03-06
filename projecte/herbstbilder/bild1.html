@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bildergalerie</title>
+	
+<style>	
+	body {
+	background-color: lightblue;
+	}
+	
+	h1 {
+	font-family: Courier New;
+	border: 3px solid blue;
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	}
+	
+	.button {
+	background: blue;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	
+	}
+	
+	.buttonRight {
+	background: blue;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	float: right;
+	}
+	
+	img {
+	border: 1px solid black;
+	border-radius: 40px;
+	
+	}
+	
+</style>
+<script>
+
+var index = 0;
+var bilder = ["bild1.jpg", "bild2.jpg", "bild3.jpg"];
+
+	
+function nextImage() {	
+	index++;
+	
+	if(index >= bilder.length) {
+	index = 0;
+	
+	}
+	
+document.getElementById("bild").src = bilder[index];
+}	
+	
+function prevImage() {
+	index--;
+	
+	if(index < 0) {
+	index = bilder.length - 1;
+	
+}
+document.getElementById("bild").src = bilder[index];	
+}	
+	
+</script>
+</head>
+
+<body>
+<h1>Herbstbilder</h1>
+<input type="button" class="button" value="Vorheriges Bild" onclick="prevImage()">
+<input type="button" class="buttonRight" value="Nächtes Bild" onclick="nextImage()">
+<center>
+<br><img id="bild" width="100%" src="bild1.jpg"></br>
+</center>
+</body>
+</html>
