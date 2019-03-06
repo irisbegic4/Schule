@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Würfelsimulation#2</title>
+
+<script>
+
+function zufallsZahl() {
+	var wert = Math.random()*6 + 0.5
+	wert = Math.random(wert);
+	return wert;
+}
+
+function wuerfelnmitzweiWuerfel() {
+	var wert1 = zufallsZahl();
+	var wert2 = zufallsZahl();
+
+	
+	var ausgabeText = wert1 + " / " + wert2;
+	
+	if(wert1 == wert2) { 
+		ausgabeText += "<br><br>Du hast einen Pasch geworfen";
+		alert("Du hast einen Pasch geworfen!")
+	}
+	
+	
+	document.getElementById("ausgabe").innerHTML = ausgabeText;
+	
+}
+
+
+</script>
+</head>
+
+<body>
+<h1>Würfelsimulation #2</h1>
+<input type="button" value="Jetzt würfeln" onclick="wuerfelnmitzweiWuerfel()">
+<p id="ausgabe"></p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset=""UTF-8>
+	<title>Falldauer</title>
+
+</head>
+
+
+<body>
+
+<h1>Falldauer des Handys</h1>
+
+<table border="1px">
+<tr><th>Höhe </th><th>Zeit bis zum Aufschlag</th></tr>
+
+<script>
+	for(var h = 2; h <=100 ; h = h+2) {
+	var t = Math.sqrt(2*h/9.81);
+	
+	
+	
+	document.write("<tr>");
+	document.write("<td>" + h + "</td>");
+	document.write("<td>" + t + "</td>");
+	document.write("</tr>");
+}
+
+</script
+
+</table>
+
+
+
+</body>
+</html>
